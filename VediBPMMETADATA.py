@@ -3,7 +3,7 @@ import shutil
 import librosa
 
 # Metti dentro il PATH della cartella che vuoi analizzare 
-directory = "/home/giorgio/Musica/Prova/Sorted"
+directory = "dir"
 
 tracks = {}
 
