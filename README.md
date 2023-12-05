@@ -6,7 +6,7 @@ This script is designed to help you organize your music files based on their BPM
 
 ```bash
 git clone https://github.com/Giorgiovanni12/BPM_ORDER.git
-cd music-organizer
+
 ```
 
 # 2)Install Dependencies:
@@ -23,17 +23,26 @@ directory = "path/to/your/music/folder"
 # 4)Run the Script:
 Execute the script to organize your music files:
 ```
-python organize_music.py
+python Bpm_organizer.py
 ```
 
-The script will calculate the BPM for each song, create a new folder named "Sistemato," and move the files into this folder in ascending order of BPM.
+The script will calculate the BPM for each song, create a new folder named "Sorted," and move the files into this folder in ascending order of BPM.
 
 View the Results:
-Once the script finishes running, you can navigate to the "Sistemato" folder to find your organized music files.
+Once the script finishes running, you can navigate to the "Sorted" folder to find your organized music files.
 
 Notes
 The script uses the Librosa library to calculate BPM from audio files.
 Make sure to back up your music files before running the script to avoid accidental data loss.
-Feel free to contribute or modify the script according to your preferences. Happy organizing!
+Feel free to contribute or modify the script according to your preferences. 
 
+                      /^--^\     /^--^\     /^--^\
+                      \____/     \____/     \____/
+                     /      \   /      \   /      \
+                    |        | |        | |        |
+                     \__  __/   \__  __/   \__  __/
+                        \ \       / /         \ \
+                        / /       \ \         / /
+                        \ \       / /         \ \ 
+                         \/       \/           \/
 
