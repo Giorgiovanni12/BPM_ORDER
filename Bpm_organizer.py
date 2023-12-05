@@ -2,35 +2,34 @@ import os
 import shutil
 import librosa
 
-# Metti dentro il PATH della cartella che vuoi analizzare 
-#Change this to the directory you want to analyze
+# Put the path of the folder you want to analyze here
 directory = "path/to/your/music/folder"
 
 tracks = {}
 
-# For loop per ogni canzone nella cartella
+# For loop for each song in the folder
 for filename in os.listdir(directory):
     filepath = os.path.join(directory, filename)
     
-    # calcola i BPM
+    # Calculate the BPM
     y, sr = librosa.load(filepath)
-    tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
+    time, _ = librosa.beat.beat_track(y=y, sr=sr)
     
-    tracks[filename] = tempo
+    tracks[filename] = time
 
-# Ordina le canzoni in base al BPM in ordine crescente
+# Sort the songs based on BPM in ascending order
 ordered_tracks = sorted(tracks.items(), key=lambda item: item[1])
 
-# Crea oppure aggiunge alla cartella la lista sistemata 
+# Create or add to the folder the sorted list
 sorted_folder = os.path.join(directory, "Sorted")
 os.makedirs(sorted_folder, exist_ok=True)
 
-# Sposta le canzoni
+# Move the songs
 for index, (track, _) in enumerate(ordered_tracks):
     src_path = os.path.join(directory, track)
     dest_path = os.path.join(sorted_folder, f"{index+1}_{track}")
     shutil.move(src_path, dest_path)
 
-# Manda a terminale l'ordine
-for track, tempo in ordered_tracks:
-    print(f"BPM for {track}: {tempo}")
+# Print the order to the terminal
+for track, time in ordered_tracks:
+    print(f"BPM for {track}: {time}")
