@@ -5,7 +5,7 @@ This script is designed to help you organize your music files based on their BPM
 # 1)Clone the Repository:
 
 ```bash
-git clone https://github.com/your-username/music-organizer.git
+git clone https://github.com/Giorgiovanni12/BPM_ORDER.git
 cd music-organizer
 ```
 
