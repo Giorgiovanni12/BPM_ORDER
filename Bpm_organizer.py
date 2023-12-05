@@ -22,7 +22,7 @@ for filename in os.listdir(directory):
 ordered_tracks = sorted(tracks.items(), key=lambda item: item[1])
 
 # Crea oppure aggiunge alla cartella la lista sistemata 
-sorted_folder = os.path.join(directory, "Sistemato")
+sorted_folder = os.path.join(directory, "Sorted")
 os.makedirs(sorted_folder, exist_ok=True)
 
 # Sposta le canzoni
