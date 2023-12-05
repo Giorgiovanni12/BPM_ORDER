@@ -4,7 +4,7 @@ import librosa
 
 # Metti dentro il PATH della cartella che vuoi analizzare 
 #Change this to the directory you want to analyze
-directory = "dir"
+directory = "path/to/your/music/folder"
 
 tracks = {}
 
